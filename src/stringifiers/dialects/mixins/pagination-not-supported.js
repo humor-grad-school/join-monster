@@ -3,6 +3,7 @@ function throwErr() {
 }
 
 module.exports = {
+  throwErr,
   handlePaginationAtRoot: throwErr,
   handleJoinedOneToManyPaginated: throwErr,
   handleBatchedOneToManyPaginated: throwErr,
