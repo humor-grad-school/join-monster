@@ -1,5 +1,5 @@
 {
-  "name": "join-monster",
+  "name": "join-monster2",
   "version": "2.1.0",
   "description": "A GraphQL to SQL query execution layer for batch data fetching.",
   "main": "dist/index.js",
@@ -26,7 +26,6 @@
     "start": "babel-watch ./test-api/server.js",
     "docs": "mkdocs serve",
     "jsdoc": "babel src/index.js -o temp.js && (jsdoc2md temp.js | sed '/\\*\\*Kind\\*\\*:/d' > docs/API.md) && rm temp.js",
-    "prepublishOnly": "/bin/sh ./scripts/prepublish.sh && npm run build",
     "preversion": ". ./scripts/checkgit.sh && npm test",
     "db-build": "TZ=UTC babel-node test-api/data/build.js",
     "db-shell": "sqlite3 --column --header test-api/data/db/demo-data.sl3"
@@ -47,7 +46,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stems/join-monster.git"
+    "url": "git+https://github.com/humor-grad-school/join-monster.git"
   },
   "keywords": [
     "graphql",
@@ -58,16 +57,15 @@
     "data",
     "schema"
   ],
-  "author": "Stem Disintermedia, Inc.",
+  "author": "Humor Grad School",
   "contributors": [
-    "Andrew Carlson <andrew@stem.is>",
-    "Matthew Elder <matt@stem.is>"
+    "SeHyun Nam <skatpgusskat@naver.com>"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/stems/join-monster/issues"
+    "url": "https://github.com/humor-grad-school/join-monster/issues"
   },
-  "homepage": "https://github.com/stems/join-monster#readme",
+  "homepage": "https://github.com/humor-grad-school/join-monster#readme",
   "peerDependencies": {
     "graphql": "0.6 || 0.7 || 0.8 || 0.9 || 0.10 || 0.11 || 0.12 || 0.13"
   },
