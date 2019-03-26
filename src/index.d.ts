@@ -4,7 +4,7 @@ import * as graphql from 'graphql'
 // Extend graphql objects and fields
 
 declare module 'graphql/type/definition' {
-  type SqlJoin<TContext, TArgs> = (table1: string, table2: string, args: TArgs, context: TContext, sqlASTNode: any) => string
+  type SqlJoin<TContext, TArgs> = (table1: string, table2: string, args: TArgs, context: TContext, sqlASTNode: any) => Promise<string> | string
   type Where<TContext, TArgs> = (usersTable: string, args: TArgs, context: TContext, sqlASTNode: any) => string | void
   type Order = 'ASC' | 'asc' | 'DESC' | 'desc'
   type OrderBy = string | { [key: string]: Order }
